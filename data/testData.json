@@ -1,0 +1,23 @@
+{
+    "customerData1": {
+        "firstname": "Aaron",
+        "lastname": "Smith",
+        "postalcode": "34342",
+        "currency": "Dollar",
+        "testUrl": "http://www.way2automation.com/angularjs-protractor/banking/#/login"
+    },
+    "customerData2": {
+        "firstname": "Heather",
+        "lastname": "Galt",
+        "postalcode": "12345",
+        "currency": "Pound",
+        "testUrl": "http://www.way2automation.com/angularjs-protractor/banking/#/login"
+    },
+    "customerData3": {
+        "firstname": "Hao",
+        "lastname": "Xin",
+        "postalcode": "88888",
+        "currency": "Dollar",
+        "testUrl": "http://www.way2automation.com/angularjs-protractor/banking/#/login"
+    }
+}
