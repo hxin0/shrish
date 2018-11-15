@@ -13,7 +13,7 @@ exports.config = {
     framework: 'jasmine2',
     // Spec patterns are relative to the current working directly when
     // protractor is called.
-    specs: ['Assignment6-actions.js'],
+    specs: ['Assignment3-json.js'],
     // Options to be passed to Jasmine.
     jasmineNodeOpts: {
         defaultTimeoutInterval: 2500000

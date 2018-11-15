@@ -136,10 +136,11 @@ export class Actions {
     }
 
     selectByValueCss(optionElements: string, name: string, logName: string) {
-        let dropDownCss = $$(optionElements).lengthgit;   
+        let dropDownCss = $$(optionElements).length;   
         console.log(optionElements);
         console.log("dropDownCss: " + dropDownCss + "@@@@==== ");
         const size = 2;
+        debugger;
         for (let index = 2; index <= size; index++) {
             let optionElement = $(optionElements + ":nth-child(" + index + ")");
             console.log(optionElements + ":nth-child(" + index + ")");

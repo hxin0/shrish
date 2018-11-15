@@ -120,10 +120,11 @@ var Actions = /** @class */ (function () {
         }
     };
     Actions.prototype.selectByValueCss = function (optionElements, name, logName) {
-        var dropDownCss = protractor_1.$$(optionElements).lengthgit;
+        var dropDownCss = protractor_1.$$(optionElements).length;
         console.log(optionElements);
         console.log("dropDownCss: " + dropDownCss + "@@@@==== ");
         var size = 2;
+        debugger;
         for (var index = 2; index <= size; index++) {
             var optionElement = protractor_1.$(optionElements + ":nth-child(" + index + ")");
             console.log(optionElements + ":nth-child(" + index + ")");
