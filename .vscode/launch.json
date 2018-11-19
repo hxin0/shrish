@@ -7,8 +7,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "workspaceFolder",
-            "program": "${workspaceFolder}/Specs/conf",
+            "name": "Launch Program",
+            "program": "/Users/jisqhx3/.npm-global/bin/protractor",
+            "args": ["conf.js"],
             "outFiles": [
                 "${workspaceFolder}/**/*.js"
             ]

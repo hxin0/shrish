@@ -1,4 +1,4 @@
-import { browser, element, by, ExpectedConditions, $ } from "protractor";
+import { browser, element, by, ExpectedConditions, $, $$ } from "protractor";
 // import { DataProvider } from '../dataprovider/dataprovider';
 import {async} from 'q';
 import { OpenAccount } from '../pages/OpenAccount/OpenAccount';
@@ -66,6 +66,17 @@ let openaccountdetails = new OpenAccount(testDataJSON.customerData1.firstname + 
 
         it("click customer dropdown and select", async()=>{
             openaccountdetails.clickCustomerDropDown();
+            // debugger;
+            let customerOption = 'option[ng-repeat="cust in Customers"]';
+            let customerOption1 = customerOption + ':nth-child(2)';
+            let tttt = await $(customerOption1).getText();
+            let tttt0 = await $$(customerOption).getText();
+            let length = await $$(customerOption).getSize();
+            let length1 = await $$(customerOption).getTagName();
+            let t2 = tttt0[2];
+            let t3 = tttt0[3];
+            let lll = tttt0.length;
+            //debugger;
             openaccountdetails.selectCustomer(testDataJSON.customerData1.firstname + " " + testDataJSON.customerData1.lastname);
         });
 

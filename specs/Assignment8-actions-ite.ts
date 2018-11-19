@@ -10,20 +10,18 @@ let customerdetails = new AddCustomer();
 let openaccountdetails = new OpenAccount(testDataJSON.customerData1.firstname + " " + testDataJSON.customerData1.lastname);
 
 using(testDataJSON, async function (data){
-    describe('BankManager Testing', ()=>{
+    describe('BankManager Testing - create customer', ()=>{
 
-        it('Launch and enter value in BankManager', async()=>{
+        beforeAll(async()=>{
             try {
                 await browser.get(data.testUrl);
             } catch (error) {
                 console.log(error);
             }
+            await openaccountdetails.clickonBankManagerLoginButton();   
         });
     
         // Click on Bank Manager Login button
-        it('Click on Bank Manager Login button', async()=>{
-            await openaccountdetails.clickonBankManagerLoginButton();    
-        });
     
         // Click on Add Customer button
         it('Click on Add customer button', async()=>{
@@ -50,6 +48,11 @@ using(testDataJSON, async function (data){
         it('enter submit button', async()=>{
             customerdetails.submitAddCustomer();
         });
+    })
+})
+
+using(testDataJSON, async function (data){
+    describe('BankManager Testing - open account', ()=>{
 
         it('click open account button', async()=>{
             openaccountdetails.clickOpenAccountButton();

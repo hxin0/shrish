@@ -135,18 +135,21 @@ export class Actions {
         }
     }
 
-    selectByValueCss(optionElements: string, name: string, logName: string) {
-        let dropDownCss = $$(optionElements).length;   
+    async selectByValueCss(optionElements: string, name: string, logName: string) {
+        let nameArray = await $$(optionElements).getText();  
+
         console.log(optionElements);
-        console.log("dropDownCss: " + dropDownCss + "@@@@==== ");
-        const size = 2;
+        console.log("dropDownCss: " + nameArray + "@@@@==== ");
+        let size = nameArray.length;
         debugger;
-        for (let index = 2; index <= size; index++) {
-            let optionElement = $(optionElements + ":nth-child(" + index + ")");
+        //browser.pause();
+        for (let index = 2; index <= size + 2; index++) {
+            let optionElement = $(optionElements + ":nth-child(" + index.toString() + ")");
             console.log(optionElements + ":nth-child(" + index + ")");
             //console.log(optionElement);
-            let text: any = optionElement.getText();
+            let text = await $(optionElements + ":nth-child(" + index.toString() + ")").getText();
             //console.log(text);
+            debugger;
             if (text === name) {
                     optionElement.click();
                     break;

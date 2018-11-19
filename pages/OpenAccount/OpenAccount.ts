@@ -67,6 +67,11 @@ export class OpenAccount extends Actions {
     public clickProcessButton() {
         const btn = this.processbtn;
         this.myCssClick(btn, "processing button");
-    }
-    
+        const alertDialog = browser.switchTo().alert();
+        expect(alertDialog.accept).toBeDefined();
+        alertDialog.getText().then((text)=>{
+            console.log("alert is displaying: " + text);
+        })
+        alertDialog.accept();
+    }    
 }

@@ -13,11 +13,15 @@ exports.config = {
     framework: 'jasmine2',
     // Spec patterns are relative to the current working directly when
     // protractor is called.
-    specs: ['Assignment3-json.js'],
+    specs: ['specs/Assignment8-actions-ite.js'],
     // Options to be passed to Jasmine.
+    allScriptsTimeout: 999999,
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 2500000
+        defaultTimeoutInterval: 999999
     },
+    // jasmineNodeOpts: {
+    //     defaultTimeoutInterval: 2500000
+    // },
     onPrepare: function () {
         // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
         //  browser.manage().window().maximize();

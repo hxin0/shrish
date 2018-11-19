@@ -69,6 +69,12 @@ var OpenAccount = /** @class */ (function (_super) {
     OpenAccount.prototype.clickProcessButton = function () {
         var btn = this.processbtn;
         this.myCssClick(btn, "processing button");
+        var alertDialog = protractor_1.browser.switchTo().alert();
+        expect(alertDialog.accept).toBeDefined();
+        alertDialog.getText().then(function (text) {
+            console.log("alert is displaying: " + text);
+        });
+        alertDialog.accept();
     };
     return OpenAccount;
 }(Action_1.Actions));

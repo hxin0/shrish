@@ -130,10 +130,32 @@ describe('BankManager Testing', function () {
         });
     }); });
     it("click customer dropdown and select", function () { return __awaiter(_this, void 0, void 0, function () {
+        var customerOption, customerOption1, tttt, tttt0, length, length1, t2, t3, lll;
         return __generator(this, function (_a) {
-            openaccountdetails.clickCustomerDropDown();
-            openaccountdetails.selectCustomer(testDataJSON.customerData1.firstname + " " + testDataJSON.customerData1.lastname);
-            return [2 /*return*/];
+            switch (_a.label) {
+                case 0:
+                    openaccountdetails.clickCustomerDropDown();
+                    customerOption = 'option[ng-repeat="cust in Customers"]';
+                    customerOption1 = customerOption + ':nth-child(2)';
+                    return [4 /*yield*/, protractor_1.$(customerOption1).getText()];
+                case 1:
+                    tttt = _a.sent();
+                    return [4 /*yield*/, protractor_1.$$(customerOption).getText()];
+                case 2:
+                    tttt0 = _a.sent();
+                    return [4 /*yield*/, protractor_1.$$(customerOption).getSize()];
+                case 3:
+                    length = _a.sent();
+                    return [4 /*yield*/, protractor_1.$$(customerOption).getTagName()];
+                case 4:
+                    length1 = _a.sent();
+                    t2 = tttt0[2];
+                    t3 = tttt0[3];
+                    lll = tttt0.length;
+                    //debugger;
+                    openaccountdetails.selectCustomer(testDataJSON.customerData1.firstname + " " + testDataJSON.customerData1.lastname);
+                    return [2 /*return*/];
+            }
         });
     }); });
     it("click currency dropdown and select", function () { return __awaiter(_this, void 0, void 0, function () {

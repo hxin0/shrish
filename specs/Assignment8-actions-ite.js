@@ -46,8 +46,8 @@ using(testDataJSON, function (data) {
     return __awaiter(this, void 0, void 0, function () {
         var _this = this;
         return __generator(this, function (_a) {
-            describe('BankManager Testing', function () {
-                it('Launch and enter value in BankManager', function () { return __awaiter(_this, void 0, void 0, function () {
+            describe('BankManager Testing - create customer', function () {
+                beforeAll(function () { return __awaiter(_this, void 0, void 0, function () {
                     var error_1;
                     return __generator(this, function (_a) {
                         switch (_a.label) {
@@ -61,21 +61,14 @@ using(testDataJSON, function (data) {
                                 error_1 = _a.sent();
                                 console.log(error_1);
                                 return [3 /*break*/, 3];
-                            case 3: return [2 /*return*/];
-                        }
-                    });
-                }); });
-                // Click on Bank Manager Login button
-                it('Click on Bank Manager Login button', function () { return __awaiter(_this, void 0, void 0, function () {
-                    return __generator(this, function (_a) {
-                        switch (_a.label) {
-                            case 0: return [4 /*yield*/, openaccountdetails.clickonBankManagerLoginButton()];
-                            case 1:
+                            case 3: return [4 /*yield*/, openaccountdetails.clickonBankManagerLoginButton()];
+                            case 4:
                                 _a.sent();
                                 return [2 /*return*/];
                         }
                     });
                 }); });
+                // Click on Bank Manager Login button
                 // Click on Add Customer button
                 it('Click on Add customer button', function () { return __awaiter(_this, void 0, void 0, function () {
                     var error_2;
@@ -120,6 +113,16 @@ using(testDataJSON, function (data) {
                         return [2 /*return*/];
                     });
                 }); });
+            });
+            return [2 /*return*/];
+        });
+    });
+});
+using(testDataJSON, function (data) {
+    return __awaiter(this, void 0, void 0, function () {
+        var _this = this;
+        return __generator(this, function (_a) {
+            describe('BankManager Testing - open account', function () {
                 it('click open account button', function () { return __awaiter(_this, void 0, void 0, function () {
                     return __generator(this, function (_a) {
                         openaccountdetails.clickOpenAccountButton();
@@ -151,4 +154,4 @@ using(testDataJSON, function (data) {
         });
     });
 });
-//# sourceMappingURL=Assignment7-actions-ite.js.map
+//# sourceMappingURL=Assignment8-actions-ite.js.map
